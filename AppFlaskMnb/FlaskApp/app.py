@@ -42,7 +42,8 @@ def home():
             text_vectorized = count_vector.transform([data])
             prediction = Mnb.predict(text_vectorized)
             res = 'spam' if prediction[0] == 1 else 'non-spam'
-            return render_template('result.html', res=res, message=f"voila votre email est consedere comme {res}")
+            # return render_template('result.html', res=res, message=f"voila votre email est consedere comme {res}")
+            return render_template('index.html', res=res, message=f"There you go, your email is considered {res}", datamessage = data)
         else:
             message = "Veuillez saisir un message"
             return render_template('index.html', message=message)
