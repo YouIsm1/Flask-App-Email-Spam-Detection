@@ -45,7 +45,7 @@ def home():
             # return render_template('result.html', res=res, message=f"voila votre email est consedere comme {res}")
             return render_template('index.html', res=res, message=f"There you go, your email is considered {res}", datamessage = data)
         else:
-            message = "Veuillez saisir un message"
+            message = "Please enter a message"
             return render_template('index.html', message=message)
     return render_template('index.html', message=message)
 
